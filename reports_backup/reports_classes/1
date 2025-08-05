@@ -1,0 +1,28 @@
+<?php
+
+interface DBconnectionrable{
+	public static function mysqlConnection();
+}
+
+ class DBconnection implements DBconnectionrable{
+	private static $servername="localhost";
+	private static $dbname="czentrix_campaign_manager";
+	private static $username="czroot";
+	private static $password="sqladmin";
+	private static $conn;
+
+	public static function mysqlConnection(){ 
+		self::$conn=mysqli_connect(self::$servername,self::$username,self::$password,self::$dbname);
+		return self::$conn; 
+	}
+	
+	public static function mysqlClose(){
+		if(self::$conn){
+                	mysqli_close(self::$conn);
+			self::$conn = null;
+        	}
+	}
+
+}
+
+?>
