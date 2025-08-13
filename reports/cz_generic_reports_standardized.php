@@ -3,7 +3,14 @@
  * Standardized Generic Reports API
  * Handles report generation with proper error handling and structure
  */
-
+/* * 
+------------------------------------------------------------------------------------------
+    IMPORTANT NOTE:
+------------------------------------------------------------------------------------------
+   *this file is not being used in the current codebase.
+   *it is kept here for future use. 
+------------------------------------------------------------------------------------------
+ */
 // Start session
 session_start();
 
