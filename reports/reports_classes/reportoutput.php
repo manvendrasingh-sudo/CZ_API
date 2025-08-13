@@ -194,6 +194,7 @@ class Reportoutput extends DBconnection implements OutputInterface
         
         // First, get total count for pagination info
         $countQuery = "SELECT COUNT(*) as total FROM (" . $query . ") as count_table";
+
         $countResult = mysqli_query($this->conn, $countQuery);
         $totalRecords = 0;
         if ($countResult) {
